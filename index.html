@@ -1,77 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  </head>
-  <body>
-    <header>    
-      <nav id="navbar">
-          <ul>
-            <li><a href="#welcome-section">Sobre</a></li>
-            <li><a href="#trabalho">Trabalho</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="welcome-section">        
-        <h1>Oi, sou Lucas Savino</h1>
-        <p>um desenvolvedor web</p>
-      </section>
-      <section id="trabalho">
-        <h2>Aqui estão alguns dos meus projetos</h2>
-        <div id="projects">
-          <a class="project" href="projects/survey_form/index.html" target="_blank">
-            <img alt="project-link" src="image_2023-06-17_164405480.png">
-            <p class="project-tile">
-              <span>< </span>Formulário de pesquisa<span> /></span>
-            </p>
-          </a>
-          <a class="project" href="projects/tribute_page/index.html" target="_blank">
-            <img alt="project-link" src="image_2023-06-17_164920530.png">
-            <p class="project-tile">
-              <span>< </span> Minha Timeline <span> /></span>
-            </p>
-          </a>
-          <a class="project" href="projects/Technical_Documentation_Page/index.html" target="_blank">
-            <img alt="project-link" src="image_2023-06-17_165135088.png">
-            <p class="project-tile">
-              <span>< </span> Documentação técnica <span> /></span>
-            </p>
-          </a>
-          <a class="project" href="projects/product_landing_page/index.html" target="_blank">
-            <img alt="project-link" src="image_2023-06-17_165402240.png">
-            <p class="project-tile">
-              <span>< </span> Página de destino de produto <span> /></span>
-            </p>
-          </a>
-        </div>
-        <a class="button">Mostrar tudo <i class="fas fa-chevron-right"></i></a>
-      </section>
-      <section id="contato">
-        <div class="trabalhar-junto">
-          <h2>Vamos trabalhar juntos...</h2>
-          <p>Como você faz seu café?</p>
-        </div>
-        <div class="contatos">
-          <a href="https://www.instagram.com/savino_ll/"><i class="fab fa-instagram"></i><p> Instagram</p></a>
-          <a href="https://github.com/savinoo"><i class="fab fa-github"></i><p> GitHub</p></a>
-          <a href="https://www.linkedin.com/in/lucas-lorenzo-savino-56b946179/"><i class="fab fa-linkedin"></i><p> LinkedIn</p></a>
-          <a href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWrRpddJdLjVLklFVvctjjplcnjCHqgKWhVrvcZjmkGsWSPRlZsMSpCPSkNCPznSbjtVBGvgG"><i class="fas fa-at"></i><p> Mandar email</p></a>
-          <a href="instagram.com"><i class="fab fa-whatsapp"></i><p> Whatsapp</p></a>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>Todos os direitos reservados</p>
-      <span>© Criado por <a href="https://www.linkedin.com/in/lucas-lorenzo-savino-56b946179/" id="profile-link" target="_blank">Lucas Lorenzo Savino</a>
-      </span>
-    </footer>
-  </body>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lucas Lorenzo Savino — AI Engineer</title>
+<meta name="description" content="AI Engineer. Agentes, engenharia de contexto e RAG com humano no loop. Ex-Petrobras.">
+<link rel="canonical" href="https://savinoo.github.io/">
+<style>
+  :root{
+    --bg:#0b0d10;
+    --panel:#12161b;
+    --line:#222a33;
+    --fg:#e6edf3;
+    --muted:#8b98a5;
+    --accent:#6ee7b7;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font:16px/1.65 ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:44rem;margin:0 auto;padding:clamp(2.5rem,8vw,6rem) 1.5rem 5rem}
+  h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;margin:0 0 .6rem;letter-spacing:-.02em}
+  .role{color:var(--accent);font-weight:600;margin:0 0 1.6rem}
+  .lede{color:var(--muted);font-size:1.05rem;margin:0 0 1rem}
+  h2{
+    font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--muted);font-weight:600;
+    margin:3.2rem 0 1.1rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);
+  }
+  .item{margin:0 0 1.9rem}
+  .item h3{font-size:1.06rem;margin:0 0 .35rem;font-weight:650}
+  .item h3 a{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--line)}
+  .item h3 a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+  .tag{
+    display:inline-block;font-size:.72rem;color:var(--muted);
+    border:1px solid var(--line);border-radius:999px;padding:.1rem .5rem;
+    margin-left:.45rem;vertical-align:2px;font-weight:500;
+  }
+  .item p{margin:.4rem 0 .5rem;color:#c3cdd7}
+  .stack{font-size:.83rem;color:var(--muted)}
+  .metric{color:var(--fg);font-weight:600}
+  ul.plain{list-style:none;padding:0;margin:0}
+  ul.plain li{padding-left:1.1rem;position:relative;margin-bottom:.55rem;color:#c3cdd7}
+  ul.plain li::before{content:"";position:absolute;left:0;top:.7em;width:.4rem;height:1px;background:var(--muted)}
+  footer{margin-top:3.4rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:.92rem}
+  footer a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+  footer a:hover{border-bottom-color:var(--accent)}
+  .sep{color:var(--line);margin:0 .5rem}
+  @media (prefers-reduced-motion:no-preference){
+    .item h3 a,footer a{transition:color .15s ease,border-color .15s ease}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <h1>Lucas Lorenzo Savino</h1>
+  <p class="role">AI Engineer — agentes, engenharia de contexto e RAG com humano no loop</p>
+
+  <p class="lede">
+    Eu desenho o sistema em volta do modelo, não o prompt. As decisões que importam são
+    o que entra na janela de contexto, quando um agente a mais paga o próprio custo,
+    o que o modelo deliberadamente não pode ver, e onde uma pessoa confirma antes de a
+    decisão valer.
+  </p>
+  <p class="lede">
+    Engenharia de Computação pelo IFF (2026). Quase dois anos na Petrobras, em logística,
+    colocando LLM dentro de um processo real de decisão.
+  </p>
+
+  <h2>Projetos</h2>
+
+  <div class="item">
+    <h3><a href="https://github.com/savinoo/ai-grading-system">ai-grading-system</a><span class="tag">TCC</span></h3>
+    <p>
+      Correção multiagente de provas discursivas, inspirada no processo do ENEM: dois
+      examinadores avaliam em contexto isolado, sem ver a nota nem o raciocínio um do
+      outro, e um árbitro é invocado só quando a divergência passa do limiar.
+    </p>
+    <p>
+      Estudo controlado com 24 correções. O RAG melhorou a especificidade avaliativa nas
+      respostas intermediárias (<span class="metric">Δ = +0,84</span>) e não mudou nada nos
+      extremos. O árbitro nunca foi acionado — a divergência real máxima foi 1,22 contra
+      limiar de 2,0. Os resultados negativos estão no README, junto com o que eu faria
+      diferente.
+    </p>
+    <p class="stack">LangGraph · LangChain · FastAPI · ChromaDB · PostgreSQL</p>
+  </div>
+
+  <div class="item">
+    <h3>Portal da Produtora<span class="tag">repo privado</span></h3>
+    <p>
+      Plataforma de ingestão e revisão de mídia para uma produtora de vídeo. App iOS
+      nativo, portal web de revisão e backend serverless, implantado na AWS e validado
+      em iPhone real.
+    </p>
+    <p>
+      A restrição que moldou o resto: upload e publicação são operações independentes —
+      subir um arquivo nunca o expõe ao cliente. O multipart vai direto do celular para
+      o S3 por URLs pré-assinadas, em partes retomáveis, sem o arquivo passar pela API.
+    </p>
+    <p class="stack">Swift · TypeScript · CDK · Lambda ARM64 · DynamoDB · S3 · Cognito · SQS · MediaConvert</p>
+  </div>
+
+  <div class="item">
+    <h3>AJUDEM — Petrobras, logística<span class="tag">interno</span></h3>
+    <p>
+      Auditoria mensal de justificativas de divergência de estoque enviadas por uma
+      empresa parceira. O sistema recupera precedentes de mais de 100 casos validados e
+      atas, propõe nota de 0 a 10 com o raciocínio, e um analista confirma antes de a
+      decisão entrar no corpus.
+    </p>
+    <p>
+      O tempo gasto no indicador caiu de <span class="metric">~3 h por semana, em média,
+      para no máximo 2–10 min</span>. Só entrou na rotina quando o time confiou o
+      suficiente para levar o output a uma reunião de negociação ao vivo.
+    </p>
+  </div>
+
+  <h2>O que eu decido nesses sistemas</h2>
+  <ul class="plain">
+    <li>Escopo de contexto: o que entra, o que fica fora, e por que vazamento entre casos invalida tanto o resultado quanto o experimento que o mede.</li>
+    <li>Topologia de agentes: contexto isolado para agentes paralelos não ancorarem um no outro; roteamento condicional para o agente caro rodar só quando se paga.</li>
+    <li>Confirmação humana: o sistema propõe com raciocínio e fontes, uma pessoa aprova, e a decisão fica rastreável até o critério.</li>
+    <li>Avaliação honesta: medir se a recuperação ajudou, e publicar os casos em que não mudou nada.</li>
+  </ul>
+
+  <footer>
+    <a href="https://github.com/savinoo">GitHub</a>
+    <span class="sep">·</span>
+    <a href="https://linkedin.com/in/savinoo">LinkedIn</a>
+    <span class="sep">·</span>
+    Rio de Janeiro, remoto ou híbrido
+  </footer>
+
+</main>
+</body>
 </html>
